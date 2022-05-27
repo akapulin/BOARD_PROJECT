@@ -11,10 +11,11 @@ let main = {
 			author: $('#author').val(),
 			content: $('#content').val()
 		};
+	
 		
 		$.ajax({
 			type: 'POST',
-			ulr: '/api/v1/posts',
+			url: '/api/v1/posts',
 			dataType: 'json',
 			contentType:'application/json; charset=utf-8',
 			data:JSON.stringify(data)
@@ -24,6 +25,8 @@ let main = {
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		})
+		
+		
 	}
 	
 }
